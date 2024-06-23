@@ -1,5 +1,15 @@
-import "@/styles/globals.css";
+import React from 'react';
+import { CssBaseline } from '@mui/material';
+import NavBar from '../components/NavBar';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <>
+      <CssBaseline />
+      <NavBar />
+      <Component {...pageProps} />
+    </>
+  );
+};
+
+export default MyApp;
